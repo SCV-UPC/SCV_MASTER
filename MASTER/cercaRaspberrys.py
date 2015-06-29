@@ -8,15 +8,12 @@ IP=cercaIP.cerca()
 class cercaRaspberrys():
 
 	def __init__(self):
-
 		self.IPs=cerca()
 
 	def modifica(self,variable):
-
 		self.IPs=variable
 
 	def direccions(self):
-
 		return self.IPs
 
 cercaRaspberrys=cercaRaspberrys()

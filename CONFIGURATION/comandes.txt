@@ -1,4 +1,5 @@
 ALARMA*python /home/pi/SCV/PYTHONSCRIPTS/alarma.py
+ADIOS*python /home/pi/SCV/PYTHONSCRIPTS/hola.py
 CANAL*python /home/pi/SCV/PYTHONSCRIPTS/canal.py
 TEMPERATURA*python /home/pi/SCV/PYTHONSCRIPTS/temperatura.py
 ABRIR VENTANA SALON*python /home/pi/SCV/PYTHONSCRIPTS/ventana_salon_0.py
@@ -29,3 +30,4 @@ APAGAR VENTILADOR*python /home/pi/SCV/PYTHONSCRIPTS/ventilador_0.py
 ENCENDER VENTILADOR*python /home/pi/SCV/PYTHONSCRIPTS/ventilador_1.py
 PONER MUSICA SALON*python /home/pi/SCV/PYTHONSCRIPTS/musica_salon_1.py
 APAGAR MUSICA SALON*python /home/pi/SCV/PYTHONSCRIPTS/musica_salon_0.py
+HOLA*python /home/pi/SCV/PYTHONSCRIPTS/hola.py

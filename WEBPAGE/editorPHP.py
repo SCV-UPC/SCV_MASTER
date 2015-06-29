@@ -2,15 +2,12 @@ import cercaIP
 import Pyro4
 import os
 
-
-
 IP_MASTER=cercaIP.cerca()
 
 intro=['<html>\n', '\t<head>\n', '\n', "\t\t<meta name='viewport' content='width=device-width,initial-scale=1'>\n", '\t\t<title>JASPER</title>\n', '\n', '\t</head>\n', '</html>\n', '\n', '<?php\n', "echo 'Soporte web para el Sistema de control por voz';\n"]
 final1=['?>\n']
 intro2=['<FORM NAME="blink" Method=\'POST\'>\n']
 final2=['</FORM>\n']
-
 
 def boto_nou(button_name,veu):
 
@@ -28,7 +25,6 @@ def trobar_comandes():
 def actualitzaPHP():
 
 	os.system('sudo /etc/init.d/apache2 stop')
-
 	diccionari=trobar_comandes()
 	veu=[]
 	comandes=[]
@@ -40,7 +36,6 @@ def actualitzaPHP():
 		comandes.append(diccionari[paraules][0])
 		IPs.append(diccionari[paraules][1])
 		botons.append("button%s"%(idx))
-
 	for idx in range(len(comandes)):
 		fitxer=fitxer+comanda_nova(comandes[idx],IPs[idx],botons[idx])
 	fitxer=fitxer+final1
@@ -48,14 +43,12 @@ def actualitzaPHP():
 		fitxer=fitxer+intro2		
 		fitxer=fitxer+boto_nou(botons[idx],veu[idx])
 	fitxer=fitxer+final2
-		
 	f=open('/home/pi/SCV/WEBPAGE/jasper.php','w')
 	text=''
 	for el in fitxer:
 		text=text+el
 	f.write(text)
 	f.close()
-
 	os.system('sudo /etc/init.d/apache2 start')
 
 if __name__=="__main__":

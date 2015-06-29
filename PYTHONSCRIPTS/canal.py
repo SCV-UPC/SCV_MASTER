@@ -9,6 +9,7 @@ IP_MASTER=sys.argv[1]
 IP=sys.argv[2]
 num_mic=sys.argv[3]
 text=sys.argv[4]
+IP_DIR=sys.argv[5]
 
 
 comandesGlobals=Pyro4.Proxy("PYRO:jasper.comandesGlobals@%s:5164"%(IP_MASTER))
@@ -17,8 +18,8 @@ simulador=Pyro4.Proxy("PYRO:jasper.Simulador@%s:5123"%(IP_MASTER))
 try:
 	
 	comandesGlobals.modifica_ocupat(1)#deshabilitar l'altre proces de deteccio de veu Jasper2
-	parla.parla(IP,num_mic,'Dime el canal, porfavor.')
-	temp=escolta.escolta(IP,num_mic)
+	parla.parla(IP_DIR,num_mic,'Dime el canal, porfavor.')
+	temp=escolta.escolta(IP_DIR,num_mic)
 	print temp
 	temp=adaptar.adaptar(temp[0])
 	print temp
