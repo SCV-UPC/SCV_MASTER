@@ -26,7 +26,7 @@ os.system("python /home/pi/SCV/WEBPAGE/temporitzador4.py &")
 os.system("python /home/pi/SCV/MASTER/simulador.py &")
 os.system("python /home/pi/SCV/JASPER2/Jasper2_remot.py &")
 
-time.sleep(10)
+time.sleep(20)
 os.system("python /home/pi/SCV/JASPER2/Jasper2.py")
 
 
